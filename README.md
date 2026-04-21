@@ -94,7 +94,7 @@ O projeto foi desenvolvido com a abordagem **mobile-first**, utilizando o sistem
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/estilo-livre.git
+git clone https://github.com/lucassloliveira/estilo-livre.git
 ```
 
 2. Abra o projeto no VSCode e instale a extensão **Live Server**
