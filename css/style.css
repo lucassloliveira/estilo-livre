@@ -1,0 +1,338 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-primaria: #1a1a1a;
+    --cor-destaque: #c8a96e;
+    --fonte-titulo: 'Playfair Display', sans-serif;
+    --fonte-corpo: 'Source Sans 3', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte-titulo);
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+/* ===========================
+   NAVBAR
+   =========================== */
+.navbar__logo {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}   
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero {
+    min-height: 60vh; /* Mobile-first */
+
+    /* Imagem do fundo */
+    background-image: url(/estilo-livre/img/home__img.jpg);
+    background-size: cover;        /* cobre todo o espaço sem distorcer */
+    background-position: center;   /* centraliza o foco da imagem */
+    background-attachment: scroll; /* scroll no mobile */
+
+    /* Necessário para o ::before funcionar */
+    position: relative;
+}   
+
+/* Overlay escuro */
+.hero::before {
+    content: ''; /* obrigatório para pseudo-elemtnos aparecerem */
+    position: absolute;
+    inset: 0;    /* atalho paara top/right/bottom/left: 0 */
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 0;  /* fica abaixo do conteúdo */
+}
+
+/* Container do conteúdo acima do overlay */
+.hero .container {
+    position: relative;
+    z-index: 1;  /* acima do ::before */
+}
+
+/* Botão customizado */
+.hero__btn {
+    position: relative;
+    overflow: hidden;
+    background: var(--cor-primaria);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: color 0.4s ease;
+}
+
+.hero__btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--cor-destaque);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 0;            
+}
+
+.hero__btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.hero__btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__btn:hover {
+    color: #fff;
+}
+
+/* ===========================
+   Desktop
+   =========================== */
+@media (min-width: 992px) {
+    .hero {
+        min-height: 100vh;
+        background-attachment: fixed; /* efeito parallax */
+    }
+
+    .hero__titulo {
+        font-size: 4.5rem;
+    }
+}
+
+/* ===========================
+   PADRÃO DE TÍTULO DE SEÇÃO
+   =========================== */
+
+/* Dividor dourado */
+.sobre__divisor {
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+/* ===========================
+   SOBRE NÓS
+   =========================== */
+.sobre__img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;       /* recorta sem distorcer */
+    object-position: center; /* foca no centro da imagem */
+    display: block;
+}
+
+.sobre__numero {
+    color: var(--cor-destaque);
+    font-size: 2rem;
+}
+
+/* ===========================
+   SERVIÇOS
+   =========================== */
+.servicos__icone {
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.servico__preco {
+    color: var(--cor-destaque);
+    font-size: 1.1rem;
+}
+
+.servico__card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+.servico__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.servico__btn {
+    background: transparent;
+    color: var(--cor-destaque);
+    border: 1.5px solid var(--cor-destaque);
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    width: 100%;
+}
+
+.servico__btn:hover {
+    background: var(--cor-destaque);
+    color: #fff;
+}
+
+/* ===========================
+   DEPOIMENTOS
+   =========================== */
+.depoimentos {
+    background-color: var(--cor-primaria);
+}
+
+.depoimento__card {
+    color: #fff;
+}
+
+.depoimento__avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* imagem sem distorcer, sempre recorta no centro  */
+    border: 3px solid var(--cor-destaque);
+}
+
+.depoimento__texto {
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.depoimento__autor {
+    color: var(--cor-destaque);
+    font-size: 1rem;
+}
+
+.depoimento__cargo {
+    font-size: 0.85rem;
+}
+
+/* Reposiciona os indicadores para não sobrepor o texto */
+.depoimentos .carousel-indicators {
+    position: relative; /* Bootstrap usa absolute como padrão */
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    z-index: 2;
+}
+
+/* Troca cor dos indicadores */
+.depoimentos .carousel-indicators button{
+    background-color: var(--cor-destaque);
+    opacity: 0.4;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; /* bolinha no lugar do traço */
+    border: none;
+}
+
+.depoimentos .carousel-indicators button.active {
+    opacity: 1;
+}
+
+/* Recolorir setas */
+.depoimentos .carousel-control-prev-icon,
+.depoimentos .carousel-control-next-icon {
+    filter: invert(0); /* já são brancas */
+    opacity: 0.6;
+}
+
+.depoimentos .carousel-control-prev,
+.depoimentos .carousel-control-next {
+    width: 40px;
+    z-index: 2;
+}
+
+/* ===========================
+   CONTATO
+   =========================== */
+.contato__btn {
+    background-color: var(--cor-destaque);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: background 0.3s ease,
+                border-color 0.3s ease;
+}  
+
+.contato__btn:hover {
+    background: #b8996e;
+    border-bottom-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 0 0.2rem rgba(200, 169, 110, 0.25);
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+.footer {
+    background-color: var(--cor-primaria);
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__titulo {
+    color: var(--cor-destaque);
+}
+
+.footer__marca {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.footer__logo{
+    width: auto;
+    height: 150px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin-bottom: -25px;
+}
+
+.footer__texto {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 260px;
+}
+
+.footer__lista {
+    font-size: 0.9rem;
+}
+
+.footer__lista a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.footer__lista a:hover {
+    color: var(--cor-destaque);
+}
+
+.footer__divider {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer__copy {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.8rem;
+}

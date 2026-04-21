@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Estilo Livre | Barbearia</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
+            <img 
+              src="img/favicon.png" 
+              alt="Estilo Livre"  
+              class="navbar__logo">
+              Estilo Livre
+            </a>
+
+            <!-- Botão hamburguer -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Abrir Navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links do menu -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero d-flex align-items-center">
+            <div class="container text-center text-white">
+
+                <h1 class="hero__titulo display-3 fw-bold">
+                    Seu estilo,<br>sua identidade.
+                </h1>
+
+                <p class="hero__subtitulo lead mt-3">
+                    Na Estilo Livre, cada corte é feito com precisão, cuidado e muito estilo
+                </p>
+
+                <a href="#contato" class="btn btn-lg mt-4 hero__btn">
+                    <span>Agendar agora</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ==== SOBRE NÓS ==== -->    
+        <section id="sobre" class="sobre py-5">
+            <div class="container">
+
+                <!-- Título da seção -->
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="sobre__titulo fw-bold">Sobre Nós</h2>
+                        <div class="sobre__divisor mx-auto mt-2"></div>
+                    </div>
+                </div>
+            
+
+                <!-- Conteúdo: imagem + texto -->
+                <div class="row align-items-center g-4">
+
+                    <!-- Imagem: ocupa tudo no mobile, metade no desktop -->
+                    <div class="col-12 col-lg-6 overflow-hidden">
+                        <img
+                            src="img/estilo-livre.jpg"
+                            alt="Interior da barbearia Estilo Livre"
+                            class="img-fluid rounded shadow sobre__img"
+                            loading="lazy">
+                    </div>
+
+                    <!-- Texto: ocupa tudo no mobile, metade no desktop -->
+                    <div class="col-12 col-lg-6">
+                        <h3 class="fw-bold mb-3">Tradição que encontrou o estilo moderno</h3>
+                        <p class="text-muted">
+                            Fundada em 2015, a <strong>Estilo Livre</strong> nasceu da paixão por transformar a barbearia tradicional em um experiência completa. Aqui, cada cliente é tratado com atenção única.
+                        </p>
+                        <p class="text-muted">
+                            Nossos profissionais são treinados continuamente para dominar as técnicas mais modernas sem perder a essência clássica da barbearia.
+                        </p>
+
+                        <!-- Números de impacto -->
+                        <div class="row text-center mt-4">
+                            <div class="col-4">
+                                <h4 class="fw-bold sobre__numero">9+</h4>
+                                <small class="text-muted">Anos de experiência</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="fw-bold sobre__numero">3k+</h4>
+                                <small class="text-muted">Clientes atendidos</small>
+                            </div>
+                            <div class="col-4">
+                                <h4 class="fw-bold sobre__numero">5★</h4>
+                                <small class="text-muted">Avaliação média</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>
+
+        <!-- ==== SERVIÇOS ==== -->
+        <section id="servicos" class="servicos py-5 bg-light">
+            <div class="container">
+
+                <!-- Título da seção -->
+                 <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="fw-bold">Nossos Serviços</h2>
+                        <div class="sobre__divisor mx-auto mt-2"></div>
+                        <p class="text-muted mt-3">Escolha o serviço ideal para o seu estilo</p>
+                    </div>
+                 </div>
+
+                 <!-- Cards -->
+                  <div class="row g-4">
+
+                    <!-- Card 1 -->
+                     <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">✂️</div>
+                                <h5 class="card-title fw-bold">Corte de Cabelo</h5>
+                                <p class="card-text text-muted">
+                                    Cortes modernos e clássicos, adaptados ao formato do seu rosto e ao seu estilo de vida.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 45</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                     
+                     <!-- Card 2 -->
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">🪒</div>
+                                <h5 class="card-title fw-bold">Barba</h5>
+                                <p class="card-text text-muted">
+                                    Modelagem, aparagem e  navalha. Barba impecável com toalha quente e produtos premium.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 35</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+
+                     <!-- Card 3 -->
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">💆</div>
+                                <h5 class="card-title fw-bold">Cabelo + Barba</h5>
+                                <p class="card-text text-muted">
+                                    O combo completo. Saia da cadeira com visual totalmente renovado do cablo à barba.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 70</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div> 
+
+                    <!-- Card 4 -->
+                     <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">💧</div>
+                                <h5 class="card-title fw-bold">Hidratação</h5>
+                                <p class="card-text text-muted">
+                                    Tratamento profissional para cabelos ressecados. Nutrição profunda com máscara de alta performance.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 55</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                     
+                     <!-- Card 5 -->
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">🎨</div>
+                                <h5 class="card-title fw-bold">Coloração</h5>
+                                <p class="card-text text-muted">
+                                    Luzes, mechas ou cobertura de brancos. Cores naturais ou ousadas - você escolhe.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 80</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div>
+                     
+                     <!-- Card 6 -->
+                      <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center servico__card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <div class="servico__icone mb-3">👑</div>
+                                <h5 class="card-title fw-bold">Experiência Premium</h5>
+                                <p class="card-text text-muted">
+                                    Corte, barba, hidratação e massagem capilar. A experiência completa da Estilo Livre.
+                                </p>
+                                <p class="servico__preco fw-bold mt-3">A partir de R$ 130</p>
+                                <a href="#contato" class="btn btn-sm servico__btn mt-2">
+                                    Agendar este serviço
+                                </a>
+                            </div>
+                        </div>
+                     </div> 
+
+                  </div>
+            </div>
+        </section>
+
+        <!-- ==== SOBRE NÓS ==== -->
+        <section id="depoimentos" class="depoimentos py-5">
+            <div class="container">
+
+                <!-- Título da seção -->
+                 <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="fw-bold  text-white">O que dizem nossos clientes</h2>
+                        <div class="sobre__divisor mx-auto mt-2"></div>
+                    </div>
+                 </div>
+
+                 <!-- Carousel -->
+                  <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+
+                        <div id="carouselDepoimentos"
+                             class="carousel slide"
+                             data-bs-ride="carousel"
+                             data-bs-interval="5000">
+
+                            <!-- Indicadores -->
+                            <div class="carousel-indicators">
+                                <button type="button"
+                                        data-bs-target="#carouselDepoimentos"
+                                        data-bs-slide-to="0"
+                                        class="active"
+                                        aria-current="true"
+                                        aria-label="Depoimento 1"></button>
+                                <button type="button"
+                                        data-bs-target="#carouselDepoimentos"
+                                        data-bs-slide-to="1"
+                                        aria-current="true"
+                                        aria-label="Depoimento 2"></button>
+                                <button type="button"
+                                        data-bs-target="#carouselDepoimentos"
+                                        data-bs-slide-to="2"
+                                        aria-current="true"
+                                        aria-label="Depoimento 3"></button>                
+                            </div>
+                            
+                            <!-- Slides -->
+                            <div class="carousel-inner">
+
+                                <!-- Slide 1 - SEMPRE tem .active -->
+                                <div class="carousel-item active">
+                                    <div class="depoimento__card text-center p-4">
+                                        <img src="img/rafael.jpg"
+                                             alt="Foto de Rafael Souza"
+                                             class="depoimento__avatar rounded-circle mb-3"
+                                             loading="lazy">
+                                        <blockquote class="blockquote">
+                                            <p class="depoimento__texto">
+                                                "Melhor barbearia que eu já fui. o antendimento é impecável e saí com um visual completamente diferente. recomendo demais!"
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="depoimento__autor fw-bold mt-2">
+                                            Rafael Souza
+                                            <span class="d-block text-muted fw-normal depoimento__cargo text-white-50">
+                                                Cliente desde 2021
+                                            </span>
+                                        </figcaption>         
+                                    </div>
+                                </div> 
+                                
+                                <!-- Slide 2 -->    
+                                <div class="carousel-item">
+                                    <div class="depoimento__card text-center p-4">
+                                        <img src="img/lucas.jpg"
+                                             alt="Foto de Lucas Mendes"
+                                             class="depoimento__avatar rounded-circle mb-3"
+                                             loading="lazy">
+                                        <blockquote class="blockquote">
+                                            <p class="depoimento__texto">
+                                                "Ambiente incrível, equipe muito profissional. Cada detalhe do corte foi pensado para mim. É a minha barbearia oficial!"
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="depoimento__autor fw-bold mt-2">
+                                            Lucas mendes
+                                            <span class="d-block text-muted fw-normal depoimento__cargo text-white-50">
+                                                Cliente desde 2022
+                                            </span>
+                                        </figcaption>         
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->    
+                                <div class="carousel-item">
+                                    <div class="depoimento__card text-center p-4">
+                                        <img src="img/bruno.jpg"
+                                             alt="Foto de Bruno Carvalho"
+                                             class="depoimento__avatar rounded-circle mb-3"
+                                             loading="lazy">
+                                        <blockquote class="blockquote">
+                                            <p class="depoimento__texto">
+                                                "Fui pela primeira vez sem expectativa e saí completamente conquistado. O barbeiro entendeu exatamente o que eu queria."
+                                            </p>
+                                        </blockquote>
+                                        <figcaption class="depoimento__autor fw-bold mt-2">
+                                            Bruno Carvalho
+                                            <span class="d-block text-muted fw-normal depoimento__cargo text-white-50">
+                                                Cliente desde 2023
+                                            </span>
+                                        </figcaption>         
+                                    </div>
+                                </div>
+                                
+                            </div> 
+                            <!-- fim .carousel-inner -->
+
+                            <!-- Controles: setas -->
+                            <button class="carousel-control-prev"
+                                    type="button"
+                                    data-bs-target="#carouselDepoimentos"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>    
+                            </button>
+
+                            <button class="carousel-control-next"
+                                    type="button"
+                                    data-bs-target="#carouselDepoimentos"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Próximo</span>    
+                            </button>
+
+                        </div>
+                        <!-- fim #carouselDepoimentos -->
+
+                    </div>
+                  </div>
+
+            </div>            
+        </section>
+
+        <!-- ==== CONTATO ==== -->
+        <section id="contato" class="contato py-5 bg-light">
+            <div class="container">
+
+                <!-- Título da seção -->
+                <div class="row mb-5">
+                    <div class="col-12 text-center">
+                        <h2 class="fw-bold">Entre em Contato</h2>
+                        <div class="sobre__divisor mx-auto mt-2"></div>
+                        <p class="text-muted mt-3">
+                            Agende seu horário ou tire suas dúvidas
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Formulário centralizado -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+
+                        <div class="contato__card p-4 p-mds-5 rounded shadow-sm bg-white">
+
+                            <!-- Nome e Email lado a lado no tablet+ -->
+                            <form class="row g-3">
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="nome" class="form-label fw-semibold">
+                                       Nome 
+                                    </label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="nome"
+                                      name="nome"
+                                      placeholder="Seu nome completo"
+                                      required>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <label for="email" class="form-label fw-semibold">
+                                       E-mail
+                                    </label>
+                                    <input
+                                      type="email"
+                                      class="form-control"
+                                      id="email"
+                                      name="email"
+                                      placeholder="seu@email.com"
+                                      required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="assunto" class="form-label fw-semibold">
+                                        Assunto
+                                    </label>
+                                    <select class="form-select" id="assunto" name="assunto">
+                                        <option value="" selected disabled>
+                                            Selecione um assunto
+                                        </option>
+                                        <option value="agendamento">Agendamento</option>
+                                        <option value="duvida">Dúvida sobre o serviço</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="mensagem" class="form-label fw-semibold">
+                                        Mensagem
+                                    </label>
+                                    <textarea
+                                      class="form-control"
+                                      id="mensagem"
+                                      name="mensagem"
+                                      rows="5"
+                                      placeholder="Escreva sua mensagem..."
+                                      required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-lg w-100 contato__btn">
+                                        Enviar mensagem
+                                    </button>
+                                </div>
+
+                            </form> 
+                            <!-- fim row interna -->
+
+                        </div>
+                        <!-- fim contato__card -->
+                         
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-5">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Coluna 1: Marca -->
+                <div class="col-12 col-md-4">
+                    <div class="footer__marca">
+                        <a href="#home" class="d-inline-block">
+                            <img
+                            src="img/logo.png"
+                            alt="Estilo Livre"
+                            class="footer__logo">
+                        </a>
+                        <p class="footer__texto">
+                            Barbearia moderna com a essência clássica. Seu estilo é a nossa especialidade.
+                        </p>
+                    </div>
+                </div> 
+
+                <!-- Coluna 2: Links rápidos -->
+                <div class="col-12 col-md-4">
+                    <h5 class="footer__titulo fw-bold mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled footer__lista">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div> 
+
+                <!-- Coluna 3: Contato -->
+                <div class="col-12 col-md-4">
+                    <h5 class="footer__titulo fw-bold mb-3">Onde Estamos</h5>
+                    <ul class="list-unstyled footer__lista">
+                        <li>📍 Rua das Tesouras, 42 — Centro</li>
+                        <li>📞 (71) 99999-9999</li>
+                        <li>📧 contato@estiliolivre.com</li>
+                        <li class="mt-2">
+                            ⏰ Seg–Sex: 9h às 20h<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Sáb: 8h às 18h
+                        </li>
+                    </ul>
+                </div> 
+
+            </div>
+
+            <!-- Linha divisória -->
+            <hr class="footer__divider mt-4">
+            
+            <!-- Copyright -->
+             <div class="row">
+                <div class="col-12 text-center">
+                    <small class="footer__copy">
+                        © 2025 Estilo Livre. Todos os direitos reservados.
+                    </small>
+                </div>
+             </div>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
