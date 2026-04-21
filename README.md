@@ -17,7 +17,7 @@ Site institucional responsivo da barbearia fictícia **Estilo Livre**, desenvolv
 | HTML5 | — | Estrutura semântica |
 | CSS3 | — | Estilização e animações |
 | Bootstrap | 5.3.8 | Grid, componentes e responsividade |
-| Google Fonts | — | Tipografia (Oswald + Open Sans) |
+| Google Fonts | — | Tipografia (Playfair Display + Source Sans 3) |
 
 ---
 
@@ -60,8 +60,8 @@ estilo-livre/
 |---|---|
 | Cor primária | `#1a1a1a` (preto grafite) |
 | Cor de destaque | `#c8a96e` (dourado) |
-| Fonte de título | Oswald (400, 600, 700) |
-| Fonte de corpo | Open Sans (400, 500) |
+| Fonte de título | Playfair Display (400, 600, 700) |
+| Fonte de corpo | Source Sans 3 (400, 500) |
 
 ---
 
