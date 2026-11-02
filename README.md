@@ -34,7 +34,7 @@ estilo-livre/
 │
 └── img/
     ├── home__img.jpg    # Imagem do hero
-    ├── estilo-livre.jpg # Imagem da seção Sobre Nós
+    ├── estilo-livre.webp # Imagem da seção Sobre Nós
     ├── rafael.jpg       # Avatar depoimento 1
     ├── lucas.jpg        # Avatar depoimento 2
     └── bruno.jpg        # Avatar depoimento 3
